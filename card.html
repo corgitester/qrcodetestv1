@@ -1,0 +1,50 @@
+<html>
+<head>
+  <title>QR Code Card</title>
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .card {
+      width: 300px;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .card h1 {
+      text-align: center;
+    }
+
+    #qrcode {
+      margin-top: 20px;
+      text-align: center;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>QR Code</h1>
+      <div id="qrcode"></div>
+    </div>
+  </div>
+  
+    <script src="qrcode.min.js"></script>
+  <script>
+    var url = "https://corgitester.github.io/qrcodetestv1/";  // Replace with the URL of your HTML file
+
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: url,
+      width: 200,
+      height: 200
+    });
+  </script>
+</body>
+</html>
